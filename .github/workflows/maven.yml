@@ -5,9 +5,9 @@ name: Run Maven with GitHub CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "testautomation" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "testautomation" ]
 
 jobs:
   build:
