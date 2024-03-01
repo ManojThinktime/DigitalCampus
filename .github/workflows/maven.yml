@@ -35,8 +35,7 @@ jobs:
         run: |
           docker-compose -f docker-compose-hubNode.yml down
 
-      - name: archive artifacts
-        uses: actions/upload-artifact@v3
+      - uses: deblockt/cucumber-report-annotations-action@v1.7
         with:
-          name: TestNG Report
-          path: ./target/surefire-reports/emailable-report.html
+          access-token: ${{ secrets.GITHUB_TOKEN }}
+          path: "**/cucumber-report.json"
